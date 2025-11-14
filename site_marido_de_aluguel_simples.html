@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marido de Aluguel — Serviços Domésticos</title>
+  <meta name="description" content="Serviços rápidos e confiáveis de manutenção, hidráulica, elétrica e montagens. Atendimento local e orçamentos sem compromisso.">
+  <style>
+    :root{
+      --accent:#2b8a7a;
+      --dark:#0b1220;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --bg:#f6f7fb;
+      --shadow: 0 6px 18px rgba(11,18,32,0.08);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--dark);line-height:1.5}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#3bb6a3);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px}
+    nav a{margin-left:18px;color:var(--dark);text-decoration:none;font-weight:600}
+
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;align-items:center;padding:28px;background:linear-gradient(180deg,rgba(255,255,255,0.6),transparent);border-radius:12px}
+    .hero-inner{display:flex;flex-direction:column;gap:12px}
+    .kicker{color:var(--accent);font-weight:700}
+    h1{margin:0;font-size:28px}
+    p.lead{margin:0;color:var(--muted)}
+    .cta{margin-top:8px;display:flex;gap:12px}
+    .btn{padding:10px 16px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+    .btn-primary{background:var(--accent);color:white}
+    .btn-ghost{background:transparent;border:2px solid var(--accent);color:var(--accent)}
+
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+    .card{background:var(--card);padding:14px;border-radius:10px;box-shadow:var(--shadow)}
+    .service-title{font-weight:700;margin:8px 0}
+
+    section.services{margin-top:18px}
+    .services-list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+
+    .about{display:flex;gap:18px;align-items:center;margin-top:18px}
+    .about img{width:220px;border-radius:10px}
+
+    .contact{margin-top:18px;padding:18px;background:linear-gradient(180deg,#fff, #fbfdff);border-radius:10px}
+    form{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    form input, form textarea{padding:10px;border-radius:8px;border:1px solid #e6e9ef}
+    form textarea{grid-column:1/3;min-height:110px}
+    .phone{font-weight:700}
+
+    footer{margin-top:28px;padding:18px;text-align:center;color:var(--muted)}
+
+    /* responsive */
+    @media (max-width:900px){
+      .grid-3{grid-template-columns:repeat(2,1fr)}
+      .services-list{grid-template-columns:repeat(2,1fr)}
+      form{grid-template-columns:1fr}
+      .about{flex-direction:column}
+      .hero{padding:18px}
+    }
+    @media (max-width:520px){
+      .grid-3{grid-template-columns:1fr}
+      .services-list{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start}
+      nav a{margin-left:0;margin-right:12px}
+      h1{font-size:22px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">MD</div>
+        <div>
+          <div style="font-weight:800">Marido & Serviços</div>
+          <div style="font-size:12px;color:var(--muted)">Manutenção rápida e confiável</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero card">
+        <div class="hero-inner">
+          <div class="kicker">Atendimento Rápido • Orçamento Grátis</div>
+          <h1>Consertos, montagens e pequenas obras — eu resolvo pra você</h1>
+          <p class="lead">Mais de 10 anos ajudando famílias e pequenos negócios com serviços elétricos, hidráulicos, montagem de móveis e manutenção geral. Transparência, preço justo e garantia.</p>
+          <div class="cta">
+            <a class="btn btn-primary" href="tel:+559199999999">Ligar Agora</a>
+            <a class="btn btn-ghost" href="#contato">Pedir Orçamento</a>
+          </div>
+        </div>
+        <div style="text-align:right;">
+          <div class="card" style="display:inline-block;margin-left:auto;padding:12px;border-radius:12px;"> 
+            <div style="font-size:12px;color:var(--muted)">Atendimento</div>
+            <div style="font-size:18px;font-weight:800">(41) 9 9999-9999</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:6px">Atendemos Curitiba e região</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="servicos" class="services">
+        <h2 style="margin-top:14px">Nossos Serviços</h2>
+        <div class="services-list">
+          <div class="card">
+            <div style="font-size:18px;font-weight:800">Elétrica</div>
+            <div class="service-title">Reparos, troca de tomadas, instalação de luminárias</div>
+            <div style="color:var(--muted);font-size:14px">Garantia de até 90 dias nos serviços elétricos realizados.</div>
+          </div>
+          <div class="card">
+            <div style="font-size:18px;font-weight:800">Hidráulica</div>
+            <div class="service-title">Conserto de vazamentos, troca de torneiras, desentupimentos</div>
+            <div style="color:var(--muted);font-size:14px">Atendimento rápido para urgências.</div>
+          </div>
+          <div class="card">
+            <div style="font-size:18px;font-weight:800">Montagem</div>
+            <div class="service-title">Montagem de móveis, instalação de prateleiras e armários</div>
+            <div style="color:var(--muted);font-size:14px">Ferramentas e montadores experientes.</div>
+          </div>
+          <div class="card">
+            <div style="font-size:18px;font-weight:800">Pintura & Acabamento</div>
+            <div class="service-title">Pequenas pinturas, retoques e reparos estéticos</div>
+          </div>
+          <div class="card">
+            <div style="font-size:18px;font-weight:800">Manutenção Geral</div>
+            <div class="service-title">Instalação de suportes, fechaduras, troca de roldanas</div>
+          </div>
+          <div class="card">
+            <div style="font-size:18px;font-weight:800">Outros Serviços</div>
+            <div class="service-title">Solicite um orçamento para serviços especiais</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sobre" class="about">
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%' height='100%' fill='%23dff3ef'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%236b7280'>Imagem de exemplo</text></svg>" alt="Imagem de exemplo">
+        <div>
+          <h3>Quem somos</h3>
+          <p style="color:var(--muted);">Profissional qualificado com foco em soluções rápidas e econômicas. Atendimento personalizado, transparência nos preços e prazo de execução combinado.</p>
+
+          <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+            <div class="card" style="padding:10px;min-width:160px"> 
+              <div style="font-weight:700">10+ anos</div>
+              <div style="font-size:13px;color:var(--muted)">de experiência</div>
+            </div>
+            <div class="card" style="padding:10px;min-width:160px"> 
+              <div style="font-weight:700">Garantia</div>
+              <div style="font-size:13px;color:var(--muted)">em serviços selecionados</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section style="margin-top:18px">
+        <h3>Depoimentos</h3>
+        <div class="grid-3">
+          <div class="card">"Atendeu rápido e consertou o vazamento em poucas horas." — Maria, Curitiba</div>
+          <div class="card">"Montou meus móveis com cuidado. Recomendo!" — João, São José dos Pinhais</div>
+          <div class="card">"Preço justo e profissionalismo." — Ana, Curitiba</div>
+        </div>
+      </section>
+
+      <section id="contato" class="contact">
+        <h3>Peça um orçamento</h3>
+        <p class="phone">(41) 9 9999-9999 • <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a></p>
+        <form id="contactForm" onsubmit="return handleSubmit(event)">
+          <input type="text" id="name" placeholder="Seu nome" required>
+          <input type="tel" id="phoneInput" placeholder="Telefone (ex: 41 9 9999-9999)" required>
+          <input type="email" id="email" placeholder="Email" required>
+          <input type="text" id="service" placeholder="Serviço desejado (ex: encanamento, montagem)" required>
+          <textarea id="message" placeholder="Descreva o problema / endereço" required></textarea>
+          <button type="submit" class="btn btn-primary">Enviar pedido</button>
+        </form>
+        <small style="display:block;margin-top:8px;color:var(--muted)">Ao enviar, você receberá um retorno por telefone ou email com orçamento estimado.</small>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Marido & Serviços — Todos os direitos reservados</div>
+      <div style="margin-top:6px;color:var(--muted);font-size:13px">CNPJ: 00.000.000/0000-00 • Atendimento: Curitiba - PR</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function sanitizePhone(value){
+      return value.replace(/[^0-9]/g,'');
+    }
+
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = sanitizePhone(document.getElementById('phoneInput').value);
+      const email = document.getElementById('email').value.trim();
+      const service = document.getElementById('service').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if(!name || !phone || !email || !service || !message){
+        alert('Preencha todos os campos antes de enviar.');
+        return false;
+      }
+
+      // Exemplo simples: abrir o email do usuário com os dados no corpo (funciona localmente em mailto)
+      const subject = encodeURIComponent('Pedido de Orçamento — ' + service);
+      const body = encodeURIComponent(`Nome: ${name}\nTelefone: ${phone}\nEmail: ${email}\nServiço: ${service}\nDetalhes: ${message}`);
+      window.location.href = `mailto:seuemail@exemplo.com?subject=${subject}&body=${body}`;
+      return false;
+    }
+  </script>
+</body>
+</html>
